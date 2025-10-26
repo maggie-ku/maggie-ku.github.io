@@ -1,0 +1,18 @@
+title: This is a title
+description: WIP of my blog. 
+url: "https://maggie-ku.github.io"
+baseurl: ""
+
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+      

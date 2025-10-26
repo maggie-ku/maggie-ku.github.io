@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <link rel="icon" type="image/png" href="/guin.png">
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #000;
+      background: #fff;
+    }
+    nav { margin-bottom: 40px; text-align: right; }
+    nav a { margin-right: 20px; color: #000; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    h1 { margin-bottom: 5px; }
+    .date { color: #666; font-size: 0.9em; }
+    .post-description { color: #444; font-style: italic; }
+    .tags { margin-top: 10px; }
+    .tags a { 
+      display: inline-block;
+      padding: 2px 8px;
+      margin-right: 5px;
+      background: #f0f0f0;
+      color: #000;
+      text-decoration: none;
+      font-size: 0.85em;
+    }
+    .post-list { list-style: none; padding: 0; }
+    .post-list li { margin-bottom: 30px; }
+    a { text-decoration: none; color: #000;}
+    a:hover { text-decoration: underline; }
+  </style>
+  {% feed_meta %}
+</head>
+<body>
+  <nav>
+    <a href="/">Blog</a>
+    <a href="/about">About</a>
+  </nav>
+  {{ content }}
+</body>
+</html>
