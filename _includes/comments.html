@@ -1,0 +1,12 @@
+{% if site.commentbox.enabled and site.commentbox.project_id != '' and site.commentbox.project_id %}
+<section class="comments" aria-label="{{ include.heading | default: 'Comments' | escape }}">
+  <h2>{{ include.heading | default: 'Comments' | escape }}</h2>
+  <p class="date">You can leave a note without a GitHub account. Comments are hosted by <a href="https://commentbox.io/privacy">CommentBox</a>.</p>
+  <div class="commentbox" id="commentbox" data-project-id="{{ site.commentbox.project_id | escape }}" data-page-url="{{ page.url | absolute_url | escape }}"></div>
+  <p id="comments-status" class="date" role="status">Loading comments…</p>
+  <noscript><p>Please enable JavaScript to read and leave comments.</p></noscript>
+  <script defer src="{{ '/assets/js/comments.js' | relative_url }}"></script>
+</section>
+{% elsif include.guestbook %}
+<p>The guestbook is not open yet. Please check back soon.</p>
+{% endif %}
