@@ -6,6 +6,10 @@
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <link rel="icon" type="image/png" href="/guin.png">
   <style>
+    img { max-width: 100%; height: auto; }
+    article { overflow-wrap: anywhere; }
+    pre { overflow-x: auto; }
+    .comments { margin-top: 40px; }
     body {
       font-family: sans-serif;
       line-height: 1.6;
@@ -15,8 +19,8 @@
       color: #000;
       background: #fff;
     }
-    nav { margin-bottom: 40px; text-align: right; }
-    nav a { margin-right: 20px; color: #000; text-decoration: none; }
+    nav { margin-bottom: 40px; text-align: right; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px 20px; }
+    nav a { color: #000; text-decoration: none; }
     nav a:hover { text-decoration: underline; }
     h1 { margin-bottom: 5px; }
     .date { color: #666; font-size: 0.9em; }
@@ -42,6 +46,7 @@
   <nav>
     <a href="/">Blog</a>
     <a href="/about">About</a>
+    <a href="/guestbook/">Guestbook</a>
   </nav>
   {{ content }}
 </body>

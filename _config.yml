@@ -1,5 +1,5 @@
 title: This is a title
-description: WIP of my blog. 
+description: WIP of my blog.
 url: "https://maggie-ku.github.io"
 baseurl: ""
 
@@ -15,4 +15,12 @@ defaults:
     values:
       layout: "post"
 
-      
+
+# Enable after creating a CommentBox project and reviewing its pricing.
+# Only the public project ID belongs here, never a secret or API key.
+commentbox:
+  enabled: false
+  project_id: ""
+
+exclude:
+  - README.md

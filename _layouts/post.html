@@ -16,3 +16,6 @@ layout: default
   
   
 </article>
+{% unless page.comments == false %}
+{% include comments.html %}
+{% endunless %}
